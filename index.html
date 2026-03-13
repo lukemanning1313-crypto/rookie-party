@@ -3,321 +3,346 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Rookie Party 2025-26</title>
+<title>Grizz Rookie Party 2025-26</title>
 
-<!-- Link Preview / Open Graph -->
-<meta property="og:title" content="Rookie Party 2025-26">
-<meta property="og:description" content="Schedule, Budget, Scavenger Hunt & Dinner Menu">
+<meta property="og:title" content="Grizz Rookie Party 2025-26">
+<meta property="og:description" content="Schedule, Budget, Games, Scavenger Hunt & Dinner">
 <meta property="og:image" content="og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rookie Party 2025-26">
-<meta name="twitter:description" content="Schedule, Budget, Scavenger Hunt & Dinner Menu">
-<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:title" content="Grizz Rookie Party 2025-26">
+<meta name="twitter:description" content="Schedule, Budget, Games, Scavenger Hunt & Dinner">
 
-<!-- Icons -->
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<!-- PWA / Add to Home Screen -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Rookie Party">
-<meta name="theme-color" content="#1a1a2e">
+<meta name="theme-color" content="#04462C">
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f8f9fb; color: #1a1a2e; min-height: 100vh; overflow-x: hidden; }
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+  :root {
+    --grizz-green: #04462C;
+    --grizz-green-light: #065f3c;
+    --grizz-brown: #8C664C;
+    --grizz-copper: #B07A5B;
+    --grizz-red: #AC262C;
+    --grizz-dark: #1a1a1a;
+    --grizz-black: #000000;
+    --bg: #f5f3f0;
+    --card-bg: #ffffff;
+    --border: #e2ddd7;
+    --text: #1a1a1a;
+    --text-muted: #7a7067;
+    --text-light: #a49a8f;
+  }
+
+  body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; overflow-x:hidden; }
 
   .header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    padding: 32px 16px 24px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, var(--grizz-green) 0%, #03351f 50%, var(--grizz-dark) 100%);
+    padding: 28px 16px 22px; text-align:center; position:relative; overflow:hidden;
   }
   .header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    content:''; position:absolute; top:-40%; right:-20%; width:300px; height:300px;
+    background: radial-gradient(circle, rgba(140,102,76,0.15) 0%, transparent 70%);
   }
-  .header h1 { font-size: 32px; font-weight: 900; color: #fff; letter-spacing: 2px; position: relative; }
-  .header .sub { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 4px; font-weight: 500; position: relative; }
+  .header-logo { width:60px; height:60px; margin:0 auto 8px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; overflow:hidden; border: 2px solid rgba(140,102,76,0.4); }
+  .header-logo img { width:50px; height:50px; object-fit:contain; }
+  .header h1 { font-size:26px; font-weight:900; color:#fff; letter-spacing:3px; position:relative; }
+  .header h1 span { color: var(--grizz-copper); }
+  .header .sub { color:rgba(255,255,255,0.5); font-size:12px; margin-top:4px; font-weight:600; letter-spacing:1px; position:relative; text-transform:uppercase; }
 
   .tab-bar {
-    position: sticky; top: 0; z-index: 40;
-    background: rgba(255,255,255,0.97);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #e8eaf0;
-    display: flex; overflow-x: auto;
-    padding: 10px 8px; gap: 6px;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    position:sticky; top:0; z-index:40; background:rgba(245,243,240,0.97); backdrop-filter:blur(12px);
+    border-bottom:2px solid var(--grizz-green); display:flex; overflow-x:auto;
+    padding:8px 6px; gap:4px; -webkit-overflow-scrolling:touch;
   }
-  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-bar::-webkit-scrollbar { display:none; }
   .tab-btn {
-    flex-shrink: 0; padding: 8px 16px; border-radius: 20px; border: none;
-    font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
-    white-space: nowrap; background: #f0f1f5; color: #6b7280;
+    flex-shrink:0; padding:8px 14px; border-radius:8px; border:none;
+    font-size:12px; font-weight:700; cursor:pointer; transition:all 0.2s;
+    white-space:nowrap; background:#e8e4df; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;
   }
-  .tab-btn.active { background: #1a1a2e; color: #fff; box-shadow: 0 2px 8px rgba(26,26,46,0.25); }
+  .tab-btn.active { background:var(--grizz-green); color:#fff; box-shadow:0 2px 8px rgba(4,70,44,0.3); }
 
-  .content { padding: 16px; max-width: 480px; margin: 0 auto; padding-bottom: 40px; }
+  .content { padding:16px; max-width:480px; margin:0 auto; padding-bottom:40px; }
 
-  .card {
-    background: #fff; border-radius: 16px; padding: 20px;
-    border: 1px solid #e8eaf0; margin-bottom: 12px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  }
-  .card-sm {
-    background: #fff; border-radius: 12px; padding: 16px;
-    border: 1px solid #e8eaf0; margin-bottom: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-  }
+  .card { background:var(--card-bg); border-radius:14px; padding:20px; border:1px solid var(--border); margin-bottom:12px; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+  .card-sm { background:var(--card-bg); border-radius:10px; padding:14px; border:1px solid var(--border); margin-bottom:8px; box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+  .card-accent { border-left: 3px solid var(--grizz-green); }
+  .card-copper { border-left: 3px solid var(--grizz-brown); }
+  .card-red { border-left: 3px solid var(--grizz-red); }
 
-  .label { color: #9ca3af; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; }
-  .big-number { font-size: 28px; font-weight: 800; }
-  .text-blue { color: #2563eb; }
-  .text-red { color: #dc2626; }
-  .text-green { color: #059669; }
-  .text-yellow { color: #d97706; }
-  .text-gray { color: #6b7280; }
-  .text-gray-dark { color: #9ca3af; }
-  .text-dark { color: #1a1a2e; }
-  .text-sm { font-size: 13px; }
-  .text-xs { font-size: 11px; }
-  .font-bold { font-weight: 700; }
-  .font-medium { font-weight: 500; }
-  .mt-1 { margin-top: 4px; }
-  .mt-2 { margin-top: 8px; }
-  .mt-3 { margin-top: 12px; }
-  .text-center { text-align: center; }
+  .label { color:var(--text-light); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; }
+  .big-number { font-size:28px; font-weight:900; }
+  .text-green { color:var(--grizz-green); }
+  .text-brown { color:var(--grizz-brown); }
+  .text-copper { color:var(--grizz-copper); }
+  .text-red { color:var(--grizz-red); }
+  .text-muted { color:var(--text-muted); }
+  .text-light { color:var(--text-light); }
+  .text-sm { font-size:13px; }
+  .text-xs { font-size:11px; }
+  .font-bold { font-weight:700; }
+  .font-black { font-weight:900; }
+  .mt-1 { margin-top:4px; }
+  .mt-2 { margin-top:8px; }
+  .mt-3 { margin-top:12px; }
+  .text-center { text-align:center; }
 
-  .progress-bar { width: 100%; height: 10px; background: #e8eaf0; border-radius: 999px; overflow: hidden; margin: 12px 0; }
-  .progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2563eb, #7c3aed); transition: width 0.5s; }
+  .progress-bar { width:100%; height:10px; background:#e8e4df; border-radius:999px; overflow:hidden; margin:12px 0; }
+  .progress-fill { height:100%; border-radius:999px; background:linear-gradient(90deg, var(--grizz-green), var(--grizz-brown)); transition:width 0.5s; }
 
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .stat-box { background: #f8f9fb; border-radius: 12px; padding: 14px; text-align: center; border: 1px solid #e8eaf0; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .stat-box { background:var(--bg); border-radius:10px; padding:12px; text-align:center; border:1px solid var(--border); }
 
-  .row { display: flex; align-items: center; justify-content: space-between; }
-  .row-start { display: flex; align-items: flex-start; gap: 12px; }
+  .row { display:flex; align-items:center; justify-content:space-between; }
+  .row-start { display:flex; align-items:flex-start; gap:12px; }
 
-  .icon-circle {
-    width: 42px; height: 42px; border-radius: 50%;
-    background: #f0f1f5; border: 2px solid #e8eaf0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex-shrink: 0;
-  }
-  .timeline-line { width: 2px; height: 28px; background: #e0e2e8; margin: 4px auto; }
+  .icon-circle { width:40px; height:40px; border-radius:50%; background:var(--grizz-green); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+  .icon-circle.copper { background:var(--grizz-brown); }
+  .icon-circle.light { background:#e8e4df; }
+  .timeline-line { width:2px; height:24px; background:var(--border); margin:3px auto; }
 
-  .timer-display { font-size: 48px; font-family: 'Inter', monospace; font-weight: 900; color: #1a1a2e; letter-spacing: -1px; }
-  .timer-red { color: #dc2626 !important; }
-  .btn {
-    padding: 10px 24px; border-radius: 10px; border: none;
-    font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.15s;
-  }
-  .btn-green { background: #059669; color: #fff; }
-  .btn-green:active { background: #047857; }
-  .btn-red { background: #dc2626; color: #fff; }
-  .btn-red:active { background: #b91c1c; }
-  .btn-gray { background: #e8eaf0; color: #374151; }
-  .btn-gray:active { background: #d1d5db; }
-  .btn-group { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
+  .timer-display { font-size:48px; font-family:'Inter',monospace; font-weight:900; color:var(--grizz-green); letter-spacing:-2px; }
+  .timer-red { color:var(--grizz-red) !important; }
+  .btn { padding:10px 24px; border-radius:8px; border:none; font-size:13px; font-weight:800; cursor:pointer; transition:all 0.15s; text-transform:uppercase; letter-spacing:0.5px; }
+  .btn-green { background:var(--grizz-green); color:#fff; }
+  .btn-green:active { background:var(--grizz-green-light); }
+  .btn-red { background:var(--grizz-red); color:#fff; }
+  .btn-gray { background:#e8e4df; color:var(--text); }
+  .btn-gray:active { background:#d5d0ca; }
+  .btn-group { display:flex; gap:8px; justify-content:center; margin-top:14px; }
 
-  .team-toggle { display: flex; background: #f0f1f5; border-radius: 12px; padding: 4px; }
-  .team-toggle button {
-    flex: 1; padding: 10px; border-radius: 8px; border: none;
-    font-size: 13px; font-weight: 700; cursor: pointer;
-    transition: all 0.2s; background: transparent; color: #9ca3af;
-  }
-  .team-toggle button.active-blue { background: #2563eb; color: #fff; box-shadow: 0 2px 6px rgba(37,99,235,0.3); }
-  .team-toggle button.active-red { background: #dc2626; color: #fff; box-shadow: 0 2px 6px rgba(220,38,38,0.3); }
+  .team-toggle { display:flex; background:#e8e4df; border-radius:10px; padding:3px; }
+  .team-toggle button { flex:1; padding:10px; border-radius:8px; border:none; font-size:12px; font-weight:800; cursor:pointer; transition:all 0.2s; background:transparent; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; }
+  .team-toggle button.active-green { background:var(--grizz-green); color:#fff; box-shadow:0 2px 6px rgba(4,70,44,0.3); }
+  .team-toggle button.active-brown { background:var(--grizz-brown); color:#fff; box-shadow:0 2px 6px rgba(140,102,76,0.3); }
 
-  .task-item {
-    border-radius: 12px; padding: 14px;
-    border: 1px solid #e8eaf0; background: #fff;
-    margin-bottom: 8px; cursor: pointer; transition: all 0.15s;
-    display: flex; align-items: center; justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-  }
-  .task-item:active { transform: scale(0.98); }
-  .task-item.done { background: #ecfdf5; border-color: #a7f3d0; }
-  .task-left { display: flex; align-items: center; gap: 12px; flex: 1; }
-  .check-circle {
-    width: 24px; height: 24px; border-radius: 50%;
-    border: 2px solid #d1d5db; display: flex; align-items: center;
-    justify-content: center; font-size: 12px; flex-shrink: 0; color: #fff;
-  }
-  .check-circle.checked { background: #059669; border-color: #059669; }
-  .task-title { font-size: 14px; font-weight: 600; color: #1a1a2e; }
-  .task-title.struck { text-decoration: line-through; color: #059669; }
-  .task-desc { color: #9ca3af; }
-  .points-badge { font-size: 13px; font-weight: 800; flex-shrink: 0; margin-left: 8px; }
+  .task-item { border-radius:10px; padding:14px; border:1px solid var(--border); background:var(--card-bg); margin-bottom:8px; cursor:pointer; transition:all 0.15s; display:flex; align-items:center; justify-content:space-between; }
+  .task-item:active { transform:scale(0.98); }
+  .task-item.done { background:#ecf5ef; border-color:#b8dcc5; }
+  .task-left { display:flex; align-items:center; gap:12px; flex:1; }
+  .check-circle { width:22px; height:22px; border-radius:50%; border:2px solid #ccc; display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; color:#fff; }
+  .check-circle.checked { background:var(--grizz-green); border-color:var(--grizz-green); }
+  .task-title { font-size:13px; font-weight:600; }
+  .task-title.struck { text-decoration:line-through; color:var(--grizz-green); }
+  .task-desc { color:var(--text-light); }
+  .points-badge { font-size:13px; font-weight:900; flex-shrink:0; margin-left:8px; }
 
-  .score-card { border-radius: 16px; padding: 16px; text-align: center; }
-  .score-card.blue { background: #eff6ff; border: 1px solid #bfdbfe; }
-  .score-card.red { background: #fef2f2; border: 1px solid #fecaca; }
+  .score-card { border-radius:14px; padding:16px; text-align:center; }
+  .score-card.green { background:#ecf5ef; border:1px solid #b8dcc5; }
+  .score-card.brown { background:#f5efe9; border:1px solid #d4c4b5; }
 
-  .menu-section { margin-bottom: 16px; }
-  .menu-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-  .menu-item { margin-bottom: 8px; font-size: 14px; }
-  .menu-item strong { color: #1a1a2e; }
-  .menu-item span { color: #9ca3af; }
+  .menu-section { margin-bottom:16px; }
+  .menu-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:8px; }
+  .menu-item { margin-bottom:8px; font-size:14px; }
+  .menu-item strong { color:var(--text); }
+  .menu-item span { color:var(--text-light); }
 
-  .info-box { border-radius: 12px; padding: 16px; margin-bottom: 12px; }
-  .info-box.green { background: #ecfdf5; border: 1px solid #a7f3d0; }
-  .info-box.yellow { background: #fffbeb; border: 1px solid #fde68a; }
+  .info-box { border-radius:10px; padding:14px; margin-bottom:12px; }
+  .info-box.green { background:#ecf5ef; border:1px solid #b8dcc5; }
+  .info-box.copper { background:#f5efe9; border:1px solid #d4c4b5; }
 
-  .modal-overlay {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
-    display: flex; align-items: center; justify-content: center;
-    z-index: 50; padding: 16px;
-    backdrop-filter: blur(4px);
-  }
-  .modal {
-    background: #fff; border-radius: 20px; padding: 24px;
-    max-width: 320px; width: 100%;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  }
-  .modal h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #1a1a2e; }
-  .modal p { color: #6b7280; font-size: 14px; margin-bottom: 16px; }
-  .modal .btn-group { margin-top: 0; }
+  .expense-icon { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+  .expense-icon.food { background:#f5efe9; }
+  .expense-icon.transport { background:#ecf5ef; }
 
-  .hidden { display: none; }
+  .phase-header { background:var(--grizz-green); color:#fff; border-radius:10px; padding:14px 16px; margin-bottom:10px; }
+  .phase-header h3 { font-size:15px; font-weight:900; text-transform:uppercase; letter-spacing:1px; }
+  .phase-header .phase-time { font-size:11px; color:rgba(255,255,255,0.6); font-weight:600; margin-top:2px; }
+  .phase-header.copper { background:var(--grizz-brown); }
+  .phase-header.dark { background:var(--grizz-dark); }
+  .phase-header.red { background:var(--grizz-red); }
 
-  .dinner-header {
-    text-align: center; padding: 20px; margin-bottom: 16px;
-    background: linear-gradient(135deg, #1a1a2e, #0f3460);
-    border-radius: 16px; color: #fff;
-  }
-  .dinner-header h2 { font-size: 22px; font-weight: 800; }
-  .dinner-header .price { color: #fbbf24; font-size: 14px; font-weight: 700; margin-top: 4px; }
+  .game-card { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:8px; }
+  .game-card .game-name { font-size:15px; font-weight:800; color:var(--text); }
+  .game-card .game-type { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--grizz-brown); margin-bottom:4px; }
+  .game-card .game-desc { font-size:12px; color:var(--text-muted); margin-top:4px; line-height:1.4; }
+  .game-card .game-penalty { font-size:11px; color:var(--grizz-red); font-weight:700; margin-top:6px; }
+  .game-card .game-stakes { font-size:11px; color:var(--grizz-green); font-weight:700; margin-top:4px; }
 
-  .expense-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px; flex-shrink: 0;
-  }
-  .expense-icon.food { background: #fef3c7; }
-  .expense-icon.transport { background: #dbeafe; }
+  .roster-name { padding:8px 12px; background:var(--bg); border-radius:8px; margin-bottom:4px; font-size:13px; font-weight:600; }
 
-  @media (max-width: 380px) {
-    .timer-display { font-size: 38px; }
-    .big-number { font-size: 24px; }
-    .header h1 { font-size: 26px; }
+  .dinner-header { text-align:center; padding:20px; margin-bottom:12px; background:linear-gradient(135deg, var(--grizz-green), #03351f); border-radius:14px; color:#fff; }
+  .dinner-header h2 { font-size:20px; font-weight:900; }
+  .dinner-header .price { color:var(--grizz-copper); font-size:13px; font-weight:700; margin-top:4px; }
+
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; z-index:50; padding:16px; backdrop-filter:blur(4px); }
+  .modal { background:#fff; border-radius:16px; padding:24px; max-width:320px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.2); }
+  .modal h3 { font-size:17px; font-weight:800; margin-bottom:6px; }
+  .modal p { color:var(--text-muted); font-size:13px; margin-bottom:16px; }
+  .modal .btn-group { margin-top:0; }
+
+  .hidden { display:none; }
+
+  @media (max-width:380px) {
+    .timer-display { font-size:38px; }
+    .big-number { font-size:24px; }
+    .header h1 { font-size:22px; }
   }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>ROOKIE PARTY</h1>
-  <div class="sub">2025-26 Season</div>
+  <div class="header-logo">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Utah_Grizzlies_logo.svg" alt="Grizzlies" onerror="this.parentElement.innerHTML='🐻'">
+  </div>
+  <h1>ROOKIE <span>PARTY</span></h1>
+  <div class="sub">Utah Grizzlies &bull; 2025-26</div>
 </div>
 
-<div class="tab-bar" id="tabBar">
-  <button class="tab-btn active" onclick="showTab('schedule')">📋 Schedule</button>
-  <button class="tab-btn" onclick="showTab('budget')">💰 Budget</button>
-  <button class="tab-btn" onclick="showTab('hunt')">🏒 Hunt</button>
-  <button class="tab-btn" onclick="showTab('dinner')">🍽️ Dinner</button>
-  <button class="tab-btn" onclick="showTab('teams')">👥 Teams</button>
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('schedule')">Schedule</button>
+  <button class="tab-btn" onclick="showTab('games')">Games</button>
+  <button class="tab-btn" onclick="showTab('hunt')">Hunt</button>
+  <button class="tab-btn" onclick="showTab('budget')">Budget</button>
+  <button class="tab-btn" onclick="showTab('dinner')">Dinner</button>
+  <button class="tab-btn" onclick="showTab('teams')">Rosters</button>
 </div>
 
 <div class="content">
 
-  <!-- SCHEDULE TAB -->
+  <!-- SCHEDULE -->
   <div id="tab-schedule">
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🏠</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">12:00 PM</div><div class="font-bold text-sm">Meet at Apartments</div><div class="text-xs text-gray-dark">Games & challenges kick off</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">🏠</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:00 PM</div><div class="font-bold text-sm">Rookies Arrive at APT</div><div class="text-xs text-light">Beer at the door. It begins.</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🚌</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">2:00 PM</div><div class="font-bold text-sm">Bus Leaves APT</div><div class="text-xs text-gray-dark">One-way party bus downtown</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">📋</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:10 PM</div><div class="font-bold text-sm">Team Draft & Reveal</div><div class="text-xs text-light">Bukes & Reggie announce squads</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🏒</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">2:30 PM</div><div class="font-bold text-sm">Scavenger Hunt Starts</div><div class="text-xs text-gray-dark">Rookies split — Team Bukes vs Team Reggie</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🍺</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">12:20 PM</div><div class="font-bold text-sm">Warm-Up Rounds</div><div class="text-xs text-light">Flip cup, beer pong, trivia</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🍻</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">2:30 PM</div><div class="font-bold text-sm">Vets Free Time</div><div class="text-xs text-gray-dark">Vets do own thing, buy own drinks</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle" style="background:var(--grizz-red)">🔥</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-red font-bold">12:50 PM</div><div class="font-bold text-sm">The Gauntlet</div><div class="text-xs text-light">5 rounds. Escalating. No mercy.</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">⏰</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">5:30 PM</div><div class="font-bold text-sm">Scavenger Hunt Ends</div><div class="text-xs text-gray-dark">Teams report back, scores tallied</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">🚌</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">2:00 PM</div><div class="font-bold text-sm">Bus Leaves APT</div><div class="text-xs text-light">Party bus downtown — one way</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🥩</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">6:00 PM</div><div class="font-bold text-sm">Team Dinner @ Spencer's</div><div class="text-xs text-gray-dark">Timpanogos Menu — $100/person</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🏒</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">2:30 PM</div><div class="font-bold text-sm">Scavenger Hunt Starts</div><div class="text-xs text-light">Team Bukes vs Team Reggie</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🎉</div><div class="timeline-line"></div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">8:30 PM</div><div class="font-bold text-sm">Lake Effect</div><div class="text-xs text-gray-dark">Remaining budget goes to the tab</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle light">🍻</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-muted font-bold">2:30 PM</div><div class="font-bold text-sm">Vets Free Time</div><div class="text-xs text-light">Own thing, own tabs</div></div>
+    </div>
+    <div class="row-start" style="margin-bottom:4px">
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">⏰</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">5:30 PM</div><div class="font-bold text-sm">Hunt Ends</div><div class="text-xs text-light">Scores tallied, winners declared</div></div>
+    </div>
+    <div class="row-start" style="margin-bottom:4px">
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🥩</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">6:00 PM</div><div class="font-bold text-sm">Team Dinner @ Spencer's</div><div class="text-xs text-light">Timpanogos Menu — $100/person</div></div>
+    </div>
+    <div class="row-start" style="margin-bottom:4px">
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">🎉</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">8:30 PM</div><div class="font-bold text-sm">Lake Effect</div><div class="text-xs text-light">Remaining budget → the tab</div></div>
     </div>
     <div class="row-start">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="icon-circle">🚗</div>
-      </div>
-      <div style="padding-top:2px"><div class="text-xs text-blue font-bold">Late</div><div class="font-bold text-sm">Uber Home</div><div class="text-xs text-gray-dark">Stay if Lake is buzzing</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle light">🚗</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-muted font-bold">Late</div><div class="font-bold text-sm">Uber Home</div><div class="text-xs text-light">Stay if Lake is buzzing</div></div>
     </div>
   </div>
 
-  <!-- BUDGET TAB -->
-  <div id="tab-budget" class="hidden">
-    <div class="card">
-      <div class="row"><span class="label">Total Budget</span><span class="big-number text-dark">$7,000</span></div>
-      <div class="text-xs text-gray-dark mt-1">$5,400 rookie dues + $1,700 fine fund</div>
-      <div class="progress-bar"><div class="progress-fill" style="width:62.4%"></div></div>
-      <div class="grid-2">
-        <div class="stat-box"><div class="big-number text-red" style="font-size:22px">$4,370</div><div class="text-xs text-gray-dark">Committed</div></div>
-        <div class="stat-box"><div class="big-number text-green" style="font-size:22px">$2,630</div><div class="text-xs text-gray-dark">For Drinks</div></div>
-      </div>
+  <!-- GAMES -->
+  <div id="tab-games" class="hidden">
+    <div class="phase-header"><h3>Phase 1 — The Arrival</h3><div class="phase-time">12:00 – 12:20 PM</div></div>
+    <div class="game-card card-accent">
+      <div class="game-type">Setup</div>
+      <div class="game-name">The Walk-In</div>
+      <div class="game-desc">Every rookie gets handed a beer at the door. You drink it before you sit down. No exceptions. Music on, energy building.</div>
+    </div>
+    <div class="game-card card-accent">
+      <div class="game-type">Reveal</div>
+      <div class="game-name">The Draft</div>
+      <div class="game-desc">Bukes & Reggie announce their teams. Each rookie joins their captain. Teams get 2 minutes to pick a team name and war cry.</div>
+      <div class="game-stakes">★ The war cry comes back later — make it count</div>
     </div>
 
-    <div class="card-sm row">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="expense-icon food">🍽️</div>
-        <div><div class="font-bold text-sm">Dinner (Spencer's)</div><div class="text-xs text-gray-dark">$100/person + tax & tip</div></div>
-      </div>
-      <div class="font-bold text-dark">$3,700</div>
+    <div class="phase-header copper" style="margin-top:16px"><h3>Phase 2 — Warm-Up Rounds</h3><div class="phase-time">12:20 – 12:50 PM</div></div>
+    <div class="game-card card-copper">
+      <div class="game-type">Round 1</div>
+      <div class="game-name">Flip Cup Gauntlet</div>
+      <div class="game-desc">Classic flip cup, team vs team. Best of 3. Start normal, then blindfolded, then non-dominant hand.</div>
+      <div class="game-penalty">Losing team: everyone takes a penalty shot</div>
     </div>
-    <div class="card-sm row">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="expense-icon transport">🚌</div>
-        <div><div class="font-bold text-sm">Party Bus</div><div class="text-xs text-gray-dark">1-way to downtown</div></div>
-      </div>
-      <div class="font-bold text-dark">$670</div>
+    <div class="game-card card-copper">
+      <div class="game-type">Round 2</div>
+      <div class="game-name">Beer Pong Blitz</div>
+      <div class="game-desc">Speed pong — 5 min time limit. Whoever sinks more cups wins. Both teams play simultaneously or alternate shots.</div>
+      <div class="game-penalty">Losing team: finish all remaining cups</div>
+    </div>
+    <div class="game-card card-copper">
+      <div class="game-type">Round 3</div>
+      <div class="game-name">Rookie Trivia</div>
+      <div class="game-desc">Rapid-fire questions about the team, the league, vets' stats, Grizzlies history. One rookie from each team goes head-to-head. Rotate each question.</div>
+      <div class="game-penalty">Wrong answer = drink. Hesitation = double.</div>
+      <div class="game-stakes">★ Vets supply the questions</div>
     </div>
 
-    <div class="info-box green mt-3">
-      <div class="text-green font-bold text-sm" style="margin-bottom:6px">Drinks Budget</div>
-      <div class="text-xs">
-        <div class="row" style="margin-bottom:4px"><span class="text-gray">Vets (during scavenger hunt)</span><span class="text-gray font-medium">Pay own tab</span></div>
-        <div class="row"><span class="text-gray">Lake Effect tab</span><span class="text-green font-bold" style="font-size:14px">~$2,630</span></div>
-      </div>
+    <div class="phase-header red" style="margin-top:16px"><h3>Phase 3 — The Gauntlet</h3><div class="phase-time">12:50 – 1:40 PM &bull; Where legends are made</div></div>
+    <div class="game-card card-red">
+      <div class="game-type">Gauntlet Round 1</div>
+      <div class="game-name">Shotgun Relay</div>
+      <div class="game-desc">Teams line up single file. Relay-style shotgun race — one finishes, next one starts. First team through all members wins.</div>
+      <div class="game-penalty">Losing team: every member takes another penalty shot</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-type">Gauntlet Round 2</div>
+      <div class="game-name">The Hot Seat</div>
+      <div class="game-desc">One rookie sits in front of everyone. Vets fire rapid questions — embarrassing stories, "who on this team would...", hockey trivia. 30 seconds on the clock.</div>
+      <div class="game-penalty">Every wrong answer or hesitation = drink</div>
+      <div class="game-stakes">★ Team with fewest total drinks wins the round</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-type">Gauntlet Round 3</div>
+      <div class="game-name">Captain's Pick</div>
+      <div class="game-desc">Each captain picks one rookie from THE OTHER team. Those two go head-to-head in a chugging race. Pure 1v1.</div>
+      <div class="game-penalty">Loser's ENTIRE team drinks</div>
+      <div class="game-stakes">★ Strategy matters — pick wisely</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-type">Gauntlet Round 4</div>
+      <div class="game-name">The Balcony</div>
+      <div class="game-desc">Both teams go to the balcony. Each team performs their war cry from The Draft to the parking lot below. Vets judge volume, energy, creativity.</div>
+      <div class="game-penalty">Losing team: shotgun on the balcony</div>
+      <div class="game-stakes">★ The spectacle moment of the day</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-type">Gauntlet Round 5</div>
+      <div class="game-name">Last Man Standing</div>
+      <div class="game-desc">Musical chairs meets drinking. Music plays, chairs get pulled. When you're out, you take a shot. Last rookie standing wins a golden advantage.</div>
+      <div class="game-penalty">Each elimination = a shot</div>
+      <div class="game-stakes">★ Winner earns 50 BONUS POINTS for scavenger hunt</div>
+    </div>
+
+    <div class="phase-header dark" style="margin-top:16px"><h3>Phase 4 — The Send-Off</h3><div class="phase-time">1:40 – 2:00 PM</div></div>
+    <div class="game-card">
+      <div class="game-type">Final</div>
+      <div class="game-name">The Bus Chug</div>
+      <div class="game-desc">Full team chug race — every rookie chugs simultaneously. Winning team picks seats on the bus first.</div>
+    </div>
+    <div class="game-card">
+      <div class="game-type">Ceremony</div>
+      <div class="game-name">Balcony Send-Off</div>
+      <div class="game-desc">Group photo on the balcony. Captains give a quick speech. Announce the apartment winner and the scavenger hunt bonus. Head to the bus.</div>
+      <div class="game-stakes">★ Bus leaves at 2:00 SHARP</div>
     </div>
   </div>
 
-  <!-- SCAVENGER HUNT TAB -->
+  <!-- HUNT -->
   <div id="tab-hunt" class="hidden">
     <div class="card text-center">
       <div class="label">Hunt Timer</div>
@@ -327,43 +352,57 @@
         <button class="btn btn-gray" onclick="resetTimer()">Reset</button>
       </div>
     </div>
-
     <div class="grid-2" style="margin-bottom:12px">
-      <div class="score-card blue">
-        <div class="label">Team Bukes</div>
-        <div class="big-number text-blue mt-1" id="bukesScore">0</div>
-        <div class="text-xs text-gray-dark" id="bukesPct">0% complete</div>
-      </div>
-      <div class="score-card red">
-        <div class="label">Team Reggie</div>
-        <div class="big-number text-red mt-1" id="reggieScore">0</div>
-        <div class="text-xs text-gray-dark" id="reggiePct">0% complete</div>
-      </div>
+      <div class="score-card green"><div class="label">Team Bukes</div><div class="big-number text-green mt-1" id="bukesScore">0</div><div class="text-xs text-light" id="bukesPct">0%</div></div>
+      <div class="score-card brown"><div class="label">Team Reggie</div><div class="big-number text-brown mt-1" id="reggieScore">0</div><div class="text-xs text-light" id="reggiePct">0%</div></div>
     </div>
-
     <div class="team-toggle" style="margin-bottom:12px">
-      <button id="toggle-bukes" class="active-blue" onclick="switchTeam('bukes')">Team Bukes</button>
+      <button id="toggle-bukes" class="active-green" onclick="switchTeam('bukes')">Team Bukes</button>
       <button id="toggle-reggie" onclick="switchTeam('reggie')">Team Reggie</button>
     </div>
-
     <div id="taskList"></div>
   </div>
 
-  <!-- DINNER TAB -->
-  <div id="tab-dinner" class="hidden">
-    <div class="dinner-header">
-      <h2>Spencer's Steaks & Chops</h2>
-      <div class="price">Timpanogos Menu — $100/person</div>
+  <!-- BUDGET -->
+  <div id="tab-budget" class="hidden">
+    <div class="card">
+      <div class="row"><span class="label">Total Budget</span><span class="big-number">$7,000</span></div>
+      <div class="text-xs text-light mt-1">$5,400 rookie dues + $1,700 fine fund</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:62.4%"></div></div>
+      <div class="grid-2">
+        <div class="stat-box"><div class="big-number text-red" style="font-size:22px">$4,370</div><div class="text-xs text-light">Committed</div></div>
+        <div class="stat-box"><div class="big-number text-green" style="font-size:22px">$2,630</div><div class="text-xs text-light">For Drinks</div></div>
+      </div>
     </div>
+    <div class="card-sm row">
+      <div style="display:flex;align-items:center;gap:12px"><div class="expense-icon food">🍽️</div><div><div class="font-bold text-sm">Dinner (Spencer's)</div><div class="text-xs text-light">$100/person + tax & tip</div></div></div>
+      <div class="font-bold">$3,700</div>
+    </div>
+    <div class="card-sm row">
+      <div style="display:flex;align-items:center;gap:12px"><div class="expense-icon transport">🚌</div><div><div class="font-bold text-sm">Party Bus</div><div class="text-xs text-light">1-way to downtown</div></div></div>
+      <div class="font-bold">$670</div>
+    </div>
+    <div class="info-box green mt-3">
+      <div class="text-green font-bold text-sm" style="margin-bottom:6px">Drinks Budget</div>
+      <div class="text-xs">
+        <div class="row" style="margin-bottom:4px"><span class="text-muted">Vets (during hunt)</span><span class="text-muted font-bold">Own tab</span></div>
+        <div class="row"><span class="text-muted">Lake Effect</span><span class="text-green font-bold" style="font-size:14px">~$2,630</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DINNER -->
+  <div id="tab-dinner" class="hidden">
+    <div class="dinner-header"><h2>Spencer's Steaks & Chops</h2><div class="price">Timpanogos Menu — $100/person</div></div>
     <div class="card">
       <div class="menu-section">
-        <div class="menu-label text-blue">First Course (choice of)</div>
+        <div class="menu-label text-green">First Course (choice of)</div>
         <div class="menu-item"><strong>Grilled Caesar</strong> <span>— romaine, focaccia croutons, anchovies, parmes</span></div>
         <div class="menu-item"><strong>Steakhouse Wedge</strong> <span>— baby iceberg, tomato pesto, bacon jam, blue cheese</span></div>
       </div>
       <div class="menu-section">
         <div class="menu-label text-red">Main Course (choice of)</div>
-        <div class="text-xs text-gray-dark" style="margin-bottom:8px">Served with mashed potatoes & asparagus</div>
+        <div class="text-xs text-light" style="margin-bottom:8px">Served with mashed potatoes & asparagus</div>
         <div class="menu-item"><strong>8oz Filet Mignon</strong> <span>— Prime</span></div>
         <div class="menu-item"><strong>14oz New York Strip</strong> <span>— Prime</span></div>
         <div class="menu-item"><strong>King Salmon</strong> <span>— with lemon</span></div>
@@ -371,46 +410,35 @@
         <div class="menu-item"><strong>Pappardelle</strong> <span>— mushroom bolognese, ricotta</span></div>
       </div>
       <div class="menu-section" style="margin-bottom:0">
-        <div class="menu-label text-yellow">Dessert</div>
+        <div class="menu-label text-brown">Dessert</div>
         <div class="menu-item"><strong>Pumpkin Pie Cheesecake</strong> <span>— graham crust, bourbon butterscotch</span></div>
       </div>
     </div>
   </div>
 
-  <!-- TEAMS TAB -->
+  <!-- TEAMS -->
   <div id="tab-teams" class="hidden">
     <div class="card text-center">
-      <div style="font-size:22px;font-weight:800;color:#1a1a2e">14 Rookies</div>
-      <div class="text-gray text-sm mt-1">Split into 2 teams of 7</div>
-      <div class="grid-2 mt-3">
-        <div class="score-card blue" style="padding:16px">
-          <div class="text-blue font-bold">Team Bukes</div>
-          <div class="text-xs text-gray mt-1">Captain: Bukes</div>
-          <div class="text-xs text-gray-dark mt-2">7 rookies</div>
-        </div>
-        <div class="score-card red" style="padding:16px">
-          <div class="text-red font-bold">Team Reggie</div>
-          <div class="text-xs text-gray mt-1">Captain: Reggie</div>
-          <div class="text-xs text-gray-dark mt-2">7 rookies</div>
-        </div>
-      </div>
+      <div style="font-size:20px;font-weight:900">13 Rookies</div>
+      <div class="text-muted text-sm mt-1">2 Teams &bull; 2 Captains</div>
     </div>
-    <div class="info-box yellow">
-      <div class="text-yellow font-bold text-sm" style="margin-bottom:8px">Rookie Dues</div>
-      <div class="grid-2 text-sm">
-        <div class="row"><span class="text-gray">AHL</span><span class="font-bold">$600/player</span></div>
-        <div class="row"><span class="text-gray">ECHL</span><span class="font-bold">$400/player</span></div>
-      </div>
+    <div style="margin-bottom:16px">
+      <div class="phase-header" style="margin-bottom:8px"><h3>Team Bukes</h3><div class="phase-time">Captain: Bukes</div></div>
+      <div class="roster-name">Friesen</div><div class="roster-name">Danny</div><div class="roster-name">Enns</div><div class="roster-name">Antonacci</div><div class="roster-name">Collela</div><div class="roster-name">Zinger</div>
+    </div>
+    <div>
+      <div class="phase-header copper" style="margin-bottom:8px"><h3>Team Reggie</h3><div class="phase-time">Captain: Reggie</div></div>
+      <div class="roster-name">Steiny</div><div class="roster-name">Kovie</div><div class="roster-name">John Gelatt</div><div class="roster-name">Noel</div><div class="roster-name">Lil Gratts</div><div class="roster-name">Mucitelli</div><div class="roster-name">Niemo</div>
     </div>
   </div>
 
 </div>
 
-<!-- Confirm Modal -->
+<!-- MODAL -->
 <div class="modal-overlay hidden" id="confirmModal" onclick="closeModal()">
   <div class="modal" onclick="event.stopPropagation()">
     <h3 id="modalTitle">Mark as completed?</h3>
-    <p id="modalDesc">Task name for Team</p>
+    <p id="modalDesc">Task for Team</p>
     <div class="btn-group">
       <button class="btn btn-gray" onclick="closeModal()">Cancel</button>
       <button class="btn btn-green" onclick="confirmTask()">Confirm</button>
@@ -419,160 +447,45 @@
 </div>
 
 <script>
-const TASKS = [
-  { id:1, title:"Body Shot Broker", desc:"Get a stranger to let you take a body shot off them. 📹 Video of the full shot.", pts:25 },
-  { id:2, title:"The Con Artist", desc:"Convince strangers you play in the NHL until they buy you a drink. 📹 Video of the pitch + 📸 photo holding the free drink with them.", pts:30 },
-  { id:3, title:"Bartender Takeover", desc:"Talk your way behind the bar and pour a round for the team. 📹 Video of you behind the bar pouring.", pts:35 },
-  { id:4, title:"Walk of Shame", desc:"Rookie walks through a packed bar shirtless doing the slowest catwalk — eye contact mandatory. 📹 Video start to finish.", pts:20 },
-  { id:5, title:"The Number", desc:"Get a stranger's number and have them text you first. 📱 Screenshot of the incoming text with timestamp.", pts:20 },
-  { id:6, title:"Stranger's Tab", desc:"Get a stranger to buy the whole team a round without mentioning hockey. 📸 Photo of the round with the stranger.", pts:30 },
-  { id:7, title:"The Divorce", desc:"Two rookies fake a loud couple's breakup in a bar until strangers react. 📹 Video capturing at least one stranger getting involved.", pts:30 },
-  { id:8, title:"Bachelorette Infiltration", desc:"Find a bach party, accept whatever dare the bride gives you. 📸 Group photo with the bach party.", pts:25 },
-  { id:9, title:"Bathroom Attendant", desc:"Rookie hands out paper towels in a bar bathroom for 5 min asking for tips. 📹 Video + show whatever cash you collected.", pts:25 },
-  { id:10, title:"Shot Roulette", desc:"Bartender picks the nastiest shot — whole team takes it, no chasers. 📹 One continuous video of every person taking the shot.", pts:20 },
-  { id:11, title:"The Proposal", desc:"Fake propose to a stranger on one knee in a crowded spot. 📹 Video must capture the stranger's reaction.", pts:25 },
-  { id:12, title:"Bouncer Battle", desc:"Arm wrestle a bouncer or bartender — has to be a real match. 📹 Video of the full arm wrestle.", pts:20 },
-  { id:13, title:"Serenade", desc:"Sing a full love song to a stranger on one knee, dead serious. 📹 Uncut video, no laughing or it doesn't count.", pts:25 },
-  { id:14, title:"Wingman From Hell", desc:"Be the worst wingman for another rookie — actively sabotage their conversation. 📹 Video with audio of the sabotage.", pts:20 },
-  { id:15, title:"The Celly", desc:"Full hockey celly on the street — glass bang on a window, shirt over head. 📹 Video from a bystander's angle.", pts:20 },
-  { id:16, title:"Anthem", desc:"Stand on a chair in a bar and belt the national anthem loud enough for the whole bar. 📹 Video showing the bar's reaction.", pts:30 },
-  { id:17, title:"Traded", desc:"Tell another group your friends traded you and get them to take you in — stay for one full drink. 📸 Selfie with the new group holding the drink.", pts:20 },
-  { id:18, title:"Two Rookies One Mic", desc:"Karaoke duet — slow romantic song, full eye contact between rookies. 📹 Video of the full performance.", pts:25 },
-  { id:19, title:"The Review", desc:"Read a dead-serious fake Yelp review of the bar to the bartender's face. 📹 Video with the bartender's reaction.", pts:20 },
-  { id:20, title:"The Pyramid", desc:"Human pyramid on the sidewalk outside a busy bar. 📸 Photo taken by a stranger (hand them the phone).", pts:25 },
+const TASKS=[
+  {id:1,title:"Team Photo with a Stranger",desc:"Photo with someone who has no idea what's going on",pts:10},
+  {id:2,title:"Karaoke Performance",desc:"One teammate sings a full song at a karaoke bar",pts:25},
+  {id:3,title:"Free Drink from a Stranger",desc:"Convince a stranger to buy someone a drink",pts:20},
+  {id:4,title:"Dance Battle",desc:"Challenge someone to a dance-off (video proof)",pts:30},
+  {id:5,title:"Jersey Selfie",desc:"Find someone wearing any sports jersey, get a selfie",pts:10},
+  {id:6,title:"Bartender's Choice",desc:"Bartender makes a custom drink, entire team tries it",pts:15},
+  {id:7,title:"Celebrity Lookalike",desc:"Find someone who looks like a celebrity, get a photo",pts:15},
+  {id:8,title:"Team Pyramid",desc:"Build a human pyramid in public (photo proof)",pts:25},
+  {id:9,title:"Bar Trivia Win",desc:"Win a round of trivia or challenge a group",pts:20},
+  {id:10,title:"Pickup Line Challenge",desc:"Use the worst pickup line on camera",pts:15},
+  {id:11,title:"Get a Phone Number",desc:"Get a real number from a stranger (with consent)",pts:20},
+  {id:12,title:"Arm Wrestling Match",desc:"Challenge a bouncer or bartender to arm wrestle",pts:25},
+  {id:13,title:"Mystery Shot",desc:"Bartender's most hated shot — entire team takes it",pts:20},
+  {id:14,title:"Sing the National Anthem",desc:"Perform the anthem in a public space",pts:30},
+  {id:15,title:"Matching Outfits Runway",desc:"Runway walk in matching outfits in a crowded area",pts:15},
+  {id:16,title:"Bachelorette Party Crashers",desc:"Find a bachelorette party and get a group photo",pts:25},
+  {id:17,title:"Tip the Street Performer",desc:"Find a street performer, tip them, join the act",pts:20},
+  {id:18,title:"Pushup Challenge",desc:"Entire team does 20 pushups in the middle of a bar",pts:15},
+  {id:19,title:"Convince Someone You're Famous",desc:"Get a stranger to believe one of you is a celebrity",pts:30},
+  {id:20,title:"Celly in Public",desc:"Full hockey celly (glass bang included) in public",pts:20},
 ];
+const MAX_POINTS=TASKS.reduce((s,t)=>s+t.pts,0);
+const TABS=['schedule','games','hunt','budget','dinner','teams'];
+let scores={bukes:{},reggie:{}},activeTeam='bukes',timerRunning=false,timeLeft=3*3600,timerInterval=null,pendingTask=null;
 
-const MAX_POINTS = TASKS.reduce((s,t) => s + t.pts, 0);
-
-let scores = { bukes: {}, reggie: {} };
-let activeTeam = 'bukes';
-let timerRunning = false;
-let timeLeft = 3 * 60 * 60;
-let timerInterval = null;
-let pendingTask = null;
-
-function showTab(id) {
-  ['schedule','budget','hunt','dinner','teams'].forEach(t => {
-    document.getElementById('tab-' + t).classList.toggle('hidden', t !== id);
-  });
-  document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-    const tabs = ['schedule','budget','hunt','dinner','teams'];
-    btn.classList.toggle('active', tabs[i] === id);
-  });
-}
-
-function formatTime(s) {
-  const h = Math.floor(s/3600);
-  const m = Math.floor((s%3600)/60);
-  const sec = s%60;
-  return h + ':' + String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
-}
-
-function updateTimer() {
-  const el = document.getElementById('timerDisplay');
-  el.textContent = formatTime(timeLeft);
-  el.classList.toggle('timer-red', timeLeft < 600);
-}
-
-function toggleTimer() {
-  timerRunning = !timerRunning;
-  const btn = document.getElementById('timerBtn');
-  if (timerRunning) {
-    btn.textContent = 'Pause';
-    btn.className = 'btn btn-red';
-    timerInterval = setInterval(() => {
-      if (timeLeft > 0) { timeLeft--; updateTimer(); }
-      else { clearInterval(timerInterval); timerRunning = false; btn.textContent = 'Start'; btn.className = 'btn btn-green'; }
-    }, 1000);
-  } else {
-    btn.textContent = 'Start';
-    btn.className = 'btn btn-green';
-    clearInterval(timerInterval);
-  }
-}
-
-function resetTimer() {
-  clearInterval(timerInterval);
-  timerRunning = false;
-  timeLeft = 3 * 60 * 60;
-  updateTimer();
-  const btn = document.getElementById('timerBtn');
-  btn.textContent = 'Start';
-  btn.className = 'btn btn-green';
-}
-
-function getTeamScore(team) {
-  return Object.keys(scores[team]).reduce((s, id) => {
-    const t = TASKS.find(x => x.id === parseInt(id));
-    return s + (t ? t.pts : 0);
-  }, 0);
-}
-
-function updateScores() {
-  const bs = getTeamScore('bukes'), rs = getTeamScore('reggie');
-  document.getElementById('bukesScore').textContent = bs;
-  document.getElementById('reggieScore').textContent = rs;
-  document.getElementById('bukesPct').textContent = Math.round((bs/MAX_POINTS)*100) + '% complete';
-  document.getElementById('reggiePct').textContent = Math.round((rs/MAX_POINTS)*100) + '% complete';
-}
-
-function switchTeam(team) {
-  activeTeam = team;
-  document.getElementById('toggle-bukes').className = team === 'bukes' ? 'active-blue' : '';
-  document.getElementById('toggle-reggie').className = team === 'reggie' ? 'active-red' : '';
-  renderTasks();
-}
-
-function renderTasks() {
-  const list = document.getElementById('taskList');
-  list.innerHTML = '';
-  TASKS.forEach(task => {
-    const done = !!scores[activeTeam][task.id];
-    const div = document.createElement('div');
-    div.className = 'task-item' + (done ? ' done' : '');
-    div.onclick = () => openModal(task);
-    div.innerHTML = `
-      <div class="task-left">
-        <div class="check-circle ${done ? 'checked' : ''}">${done ? '✓' : ''}</div>
-        <div>
-          <div class="task-title ${done ? 'struck' : ''}">${task.title}</div>
-          <div class="text-xs task-desc">${task.desc}</div>
-        </div>
-      </div>
-      <div class="points-badge ${done ? 'text-green' : 'text-yellow'}">+${task.pts}</div>
-    `;
-    list.appendChild(div);
-  });
-}
-
-function openModal(task) {
-  pendingTask = task;
-  const done = !!scores[activeTeam][task.id];
-  const teamName = activeTeam === 'bukes' ? 'Team Bukes' : 'Team Reggie';
-  document.getElementById('modalTitle').textContent = done ? 'Remove completion?' : 'Mark as completed?';
-  document.getElementById('modalDesc').textContent = task.title + ' for ' + teamName;
-  document.getElementById('confirmModal').classList.remove('hidden');
-}
-
-function closeModal() {
-  document.getElementById('confirmModal').classList.add('hidden');
-  pendingTask = null;
-}
-
-function confirmTask() {
-  if (!pendingTask) return;
-  if (scores[activeTeam][pendingTask.id]) {
-    delete scores[activeTeam][pendingTask.id];
-  } else {
-    scores[activeTeam][pendingTask.id] = true;
-  }
-  updateScores();
-  renderTasks();
-  closeModal();
-}
-
-renderTasks();
-updateScores();
+function showTab(id){TABS.forEach(t=>document.getElementById('tab-'+t).classList.toggle('hidden',t!==id));document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',TABS[i]===id));}
+function formatTime(s){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=s%60;return h+':'+String(m).padStart(2,'0')+':'+String(sec).padStart(2,'0');}
+function updateTimer(){const el=document.getElementById('timerDisplay');el.textContent=formatTime(timeLeft);el.classList.toggle('timer-red',timeLeft<600);}
+function toggleTimer(){timerRunning=!timerRunning;const btn=document.getElementById('timerBtn');if(timerRunning){btn.textContent='Pause';btn.className='btn btn-red';timerInterval=setInterval(()=>{if(timeLeft>0){timeLeft--;updateTimer();}else{clearInterval(timerInterval);timerRunning=false;btn.textContent='Start';btn.className='btn btn-green';}},1000);}else{btn.textContent='Start';btn.className='btn btn-green';clearInterval(timerInterval);}}
+function resetTimer(){clearInterval(timerInterval);timerRunning=false;timeLeft=3*3600;updateTimer();const btn=document.getElementById('timerBtn');btn.textContent='Start';btn.className='btn btn-green';}
+function getTeamScore(team){return Object.keys(scores[team]).reduce((s,id)=>{const t=TASKS.find(x=>x.id===parseInt(id));return s+(t?t.pts:0);},0);}
+function updateScores(){const bs=getTeamScore('bukes'),rs=getTeamScore('reggie');document.getElementById('bukesScore').textContent=bs;document.getElementById('reggieScore').textContent=rs;document.getElementById('bukesPct').textContent=Math.round((bs/MAX_POINTS)*100)+'%';document.getElementById('reggiePct').textContent=Math.round((rs/MAX_POINTS)*100)+'%';}
+function switchTeam(team){activeTeam=team;document.getElementById('toggle-bukes').className=team==='bukes'?'active-green':'';document.getElementById('toggle-reggie').className=team==='reggie'?'active-brown':'';renderTasks();}
+function renderTasks(){const list=document.getElementById('taskList');list.innerHTML='';TASKS.forEach(task=>{const done=!!scores[activeTeam][task.id];const div=document.createElement('div');div.className='task-item'+(done?' done':'');div.onclick=()=>openModal(task);div.innerHTML=`<div class="task-left"><div class="check-circle ${done?'checked':''}">${done?'✓':''}</div><div><div class="task-title ${done?'struck':''}">${task.title}</div><div class="text-xs task-desc">${task.desc}</div></div></div><div class="points-badge ${done?'text-green':'text-brown'}">+${task.pts}</div>`;list.appendChild(div);});}
+function openModal(task){pendingTask=task;const done=!!scores[activeTeam][task.id];document.getElementById('modalTitle').textContent=done?'Remove completion?':'Mark as completed?';document.getElementById('modalDesc').textContent=task.title+' for '+(activeTeam==='bukes'?'Team Bukes':'Team Reggie');document.getElementById('confirmModal').classList.remove('hidden');}
+function closeModal(){document.getElementById('confirmModal').classList.add('hidden');pendingTask=null;}
+function confirmTask(){if(!pendingTask)return;if(scores[activeTeam][pendingTask.id])delete scores[activeTeam][pendingTask.id];else scores[activeTeam][pendingTask.id]=true;updateScores();renderTasks();closeModal();}
+renderTasks();updateScores();
 </script>
 </body>
 </html>
