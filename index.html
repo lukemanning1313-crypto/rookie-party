@@ -199,9 +199,8 @@
 
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('schedule')">Schedule</button>
-  <button class="tab-btn" onclick="showTab('games')">Games</button>
+  <button class="tab-btn" onclick="showTab('games')">Initiation</button>
   <button class="tab-btn" onclick="showTab('hunt')">Hunt</button>
-  <button class="tab-btn" onclick="showTab('budget')">Budget</button>
   <button class="tab-btn" onclick="showTab('dinner')">Dinner</button>
   <button class="tab-btn" onclick="showTab('teams')">Rosters</button>
 </div>
@@ -212,19 +211,23 @@
   <div id="tab-schedule">
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">🏠</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:00 PM</div><div class="font-bold text-sm">Rookies Arrive at APT</div><div class="text-xs text-light">Beer at the door. It begins.</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:00 PM</div><div class="font-bold text-sm">Intake</div><div class="text-xs text-light">Rookies arrive. Chug at the door. Lineup.</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">📋</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:10 PM</div><div class="font-bold text-sm">Team Draft & Reveal</div><div class="text-xs text-light">Bukes & Reggie announce squads</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">12:15 PM</div><div class="font-bold text-sm">Squad Assignment</div><div class="text-xs text-light">Bukes & Reggie claim their rookies</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🍺</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">12:20 PM</div><div class="font-bold text-sm">Warm-Up Rounds</div><div class="text-xs text-light">Flip cup, beer pong, trivia</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">12:20 PM</div><div class="font-bold text-sm">Basic Training</div><div class="text-xs text-light">Flip cup, shotgun drills, physical punishment</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle" style="background:var(--grizz-red)">🔥</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-red font-bold">12:50 PM</div><div class="font-bold text-sm">The Gauntlet</div><div class="text-xs text-light">6 rounds. Escalating. No mercy.</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-red font-bold">12:50 PM</div><div class="font-bold text-sm">The Gauntlet</div><div class="text-xs text-light">Punishment stacks. Don't be last.</div></div>
+    </div>
+    <div class="row-start" style="margin-bottom:4px">
+      <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle" style="background:var(--grizz-dark)">⚡</div><div class="timeline-line"></div></div>
+      <div style="padding-top:2px"><div class="text-xs font-bold">1:45 PM</div><div class="font-bold text-sm">The Send-Off</div><div class="text-xs text-light">Final order. Earn your seat on the bus.</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">🚌</div><div class="timeline-line"></div></div>
@@ -232,7 +235,7 @@
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🏒</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">2:30 PM</div><div class="font-bold text-sm">Scavenger Hunt Starts</div><div class="text-xs text-light">Team Bukes vs Team Reggie</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-brown font-bold">2:30 PM</div><div class="font-bold text-sm">Scavenger Hunt</div><div class="text-xs text-light">Team Bukes vs Team Reggie downtown</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle light">🍻</div><div class="timeline-line"></div></div>
@@ -240,7 +243,7 @@
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle">⏰</div><div class="timeline-line"></div></div>
-      <div style="padding-top:2px"><div class="text-xs text-green font-bold">5:30 PM</div><div class="font-bold text-sm">Hunt Ends</div><div class="text-xs text-light">Scores tallied, winners declared</div></div>
+      <div style="padding-top:2px"><div class="text-xs text-green font-bold">5:30 PM</div><div class="font-bold text-sm">Hunt Ends</div><div class="text-xs text-light">Scores tallied, losers deal with it at dinner</div></div>
     </div>
     <div class="row-start" style="margin-bottom:4px">
       <div style="display:flex;flex-direction:column;align-items:center"><div class="icon-circle copper">🥩</div><div class="timeline-line"></div></div>
@@ -256,102 +259,120 @@
     </div>
   </div>
 
-  <!-- GAMES -->
+  <!-- INITIATION -->
   <div id="tab-games" class="hidden">
-    <div class="phase-header"><h3>Phase 1 — The Arrival</h3><div class="phase-time">12:00 – 12:20 PM</div></div>
-    <div class="game-card card-accent">
-      <div class="game-type">Setup</div>
-      <div class="game-name">The Walk-In</div>
-      <div class="game-desc">Every rookie gets handed a beer at the door. You drink it before you sit down. No exceptions. Music on, energy building.</div>
-    </div>
-    <div class="game-card card-accent">
-      <div class="game-type">Reveal</div>
-      <div class="game-name">The Draft</div>
-      <div class="game-desc">Bukes & Reggie announce their teams. Each rookie joins their captain. Teams get 2 minutes to pick a team name and war cry.</div>
-      <div class="game-stakes">★ The war cry comes back later — make it count</div>
+
+    <div class="info-box" style="background:var(--grizz-dark);border:none;color:#fff;margin-bottom:16px;text-align:center">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:var(--grizz-copper);text-transform:uppercase">Vets Run The Show</div>
+      <div style="font-size:13px;margin-top:4px;color:rgba(255,255,255,0.7)">Punishment stacks round to round. Losing team carries penalties forward. Don't be the weak link.</div>
     </div>
 
-    <div class="phase-header copper" style="margin-top:16px"><h3>Phase 2 — Warm-Up Rounds</h3><div class="phase-time">12:20 – 12:50 PM</div></div>
+    <div class="phase-header"><h3>Intake</h3><div class="phase-time">12:00 – 12:20 PM &bull; Set the tone immediately</div></div>
+    <div class="game-card card-accent">
+      <div class="game-type">Order 01</div>
+      <div class="game-name">The Door Tax</div>
+      <div class="game-desc">Every rookie gets handed a beer the second they walk in. You chug it standing in the doorway before you're allowed to enter. Vets watch. No talking.</div>
+      <div class="game-penalty">Slowest chugger: does it again</div>
+    </div>
+    <div class="game-card card-accent">
+      <div class="game-type">Order 02</div>
+      <div class="game-name">The Lineup</div>
+      <div class="game-desc">All rookies line up against the wall. One at a time, step forward — state your name, where you're from, and one thing about yourself. Vets heckle freely. This is not a safe space.</div>
+      <div class="game-penalty">Weak intro = you drink and try again</div>
+    </div>
+    <div class="game-card card-accent">
+      <div class="game-type">Order 03</div>
+      <div class="game-name">Squad Assignment</div>
+      <div class="game-desc">Bukes & Reggie step up and claim their rookies one by one. You don't pick your team — your team picks you. Each squad gets 2 minutes to come up with a war cry. You'll need it.</div>
+      <div class="game-stakes">★ The war cry comes back later. Put effort in or pay for it.</div>
+    </div>
+
+    <div class="phase-header copper" style="margin-top:16px"><h3>Basic Training</h3><div class="phase-time">12:20 – 12:50 PM &bull; Start earning your spot</div></div>
     <div class="game-card card-copper">
+      <div class="game-type">Drill 01</div>
+      <div class="game-name">Flip Cup — Escalating</div>
+      <div class="game-desc">Team vs team. Best of 3. Round 1: normal. Round 2: non-dominant hand. Round 3: blindfolded. Losing team stays at the table.</div>
+      <div class="game-penalty">Losing team: penalty shot + 20 pushups. Each member.</div>
+      <div class="game-stakes">★ First loss of the day carries forward into The Gauntlet</div>
+    </div>
+    <div class="game-card card-copper">
+      <div class="game-type">Drill 02</div>
+      <div class="game-name">Shotgun Drill</div>
+      <div class="game-desc">Vets yell "SHOTGUN" at random. Every rookie grabs a beer and goes. Last rookie to finish each time gets marked. 3 marks = you're in The Hot Seat later.</div>
+      <div class="game-penalty">3 marks = mandatory Hot Seat selection</div>
+      <div class="game-stakes">★ Stay alert. This can happen at ANY point during Basic Training.</div>
+    </div>
+    <div class="game-card card-copper">
+      <div class="game-type">Drill 03</div>
+      <div class="game-name">Vet Knowledge Check</div>
+      <div class="game-desc">Vets walk down the line asking each rookie a question — jersey numbers, hometowns, positions, stats. You should've done your homework.</div>
+      <div class="game-penalty">Wrong answer = chug. Hesitation = chug + wall sit until the next wrong answer.</div>
+    </div>
+
+    <div class="phase-header red" style="margin-top:16px"><h3>The Gauntlet</h3><div class="phase-time">12:50 – 1:45 PM &bull; Punishment stacks. Don't be last.</div></div>
+
+    <div class="info-box red" style="margin-bottom:10px">
+      <div class="text-red font-bold text-xs" style="text-transform:uppercase;letter-spacing:1px">Stacking Rule</div>
+      <div class="text-xs text-muted" style="margin-top:2px">The team that lost Basic Training starts The Gauntlet with a penalty — every member does a shotgun before Round 1 begins. From here, every loss adds to the next round.</div>
+    </div>
+
+    <div class="game-card card-red">
       <div class="game-type">Round 1</div>
-      <div class="game-name">Flip Cup Gauntlet</div>
-      <div class="game-desc">Classic flip cup, team vs team. Best of 3. Start normal, then blindfolded, then non-dominant hand.</div>
-      <div class="game-penalty">Losing team: everyone takes a penalty shot</div>
-    </div>
-    <div class="game-card card-copper">
-      <div class="game-type">Round 2</div>
-      <div class="game-name">Beer Pong Blitz</div>
-      <div class="game-desc">Speed pong — 5 min time limit. Whoever sinks more cups wins. Both teams play simultaneously or alternate shots.</div>
-      <div class="game-penalty">Losing team: finish all remaining cups</div>
-    </div>
-    <div class="game-card card-copper">
-      <div class="game-type">Round 3</div>
-      <div class="game-name">Rookie Trivia</div>
-      <div class="game-desc">Rapid-fire questions about the team, the league, vets' stats, Grizzlies history. One rookie from each team goes head-to-head. Rotate each question.</div>
-      <div class="game-penalty">Wrong answer = drink. Hesitation = double.</div>
-      <div class="game-stakes">★ Vets supply the questions</div>
-    </div>
-
-    <div class="phase-header red" style="margin-top:16px"><h3>Phase 3 — The Gauntlet</h3><div class="phase-time">12:50 – 1:40 PM &bull; Where legends are made</div></div>
-    <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 1</div>
-      <div class="game-name">Shotgun Relay</div>
-      <div class="game-desc">Teams line up single file. Relay-style shotgun race — one finishes, next one starts. First team through all members wins.</div>
-      <div class="game-penalty">Losing team: every member takes another penalty shot</div>
-    </div>
-    <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 2</div>
       <div class="game-name">The Hot Seat</div>
-      <div class="game-desc">One rookie sits in front of everyone. Vets fire rapid questions — embarrassing stories, "who on this team would...", hockey trivia. 30 seconds on the clock.</div>
-      <div class="game-penalty">Every wrong answer or hesitation = drink</div>
-      <div class="game-stakes">★ Team with fewest total drinks wins the round</div>
+      <div class="game-desc">Rookies get called up one at a time. Vets fire questions: "Roast yourself." "Sing right now." "Most embarrassing moment — go." "Who's the worst player on your team?" 30 seconds on the clock per rookie. No hesitation.</div>
+      <div class="game-penalty">Hesitation or weak answer = drink + 10 pushups on the spot</div>
+      <div class="game-stakes">★ Vets vote on who had the weakest seat — that rookie drinks double</div>
     </div>
     <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 3</div>
-      <div class="game-name">Captain's Pick</div>
-      <div class="game-desc">Each captain picks one rookie from THE OTHER team. Those two go head-to-head in a chugging race. Pure 1v1.</div>
-      <div class="game-penalty">Loser's ENTIRE team drinks</div>
-      <div class="game-stakes">★ Strategy matters — pick wisely</div>
+      <div class="game-type">Round 2</div>
+      <div class="game-name">Shotgun Relay</div>
+      <div class="game-desc">Teams line up. Relay-style shotgun race — one finishes, next starts. But the losing team from Basic Training starts 1 beer behind (stacking penalty).</div>
+      <div class="game-penalty">Losing team: wall sit holding a full beer. Drop it = start over.</div>
     </div>
     <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 4</div>
-      <div class="game-name">The Coliseum (Dizzy Bat)</div>
-      <div class="game-desc">Each captain picks one rookie from THEIR OWN team. Both go down to the parking lot, one at a time — everyone else watches from the balcony. 10 spins on the bat, then a vet pitches from ~15 feet.</div>
+      <div class="game-type">Round 3</div>
+      <div class="game-name">Captain's Sacrifice</div>
+      <div class="game-desc">Each captain points at one rookie from THE OTHER team. Those two go 1v1 — chug race. But here's the twist: loser doesn't just drink. Loser's entire team does 15 burpees while the winner's team watches.</div>
+      <div class="game-penalty">Losing rookie: extra penalty shot on top of the burpees</div>
+      <div class="game-stakes">★ Captains — choose the guy you think will crack</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-type">Round 4</div>
+      <div class="game-name">The Coliseum</div>
+      <div class="game-desc">Everyone to the balcony. Each captain sends one rookie down to the parking lot. 10 spins on the bat, then a vet pitches from 15 feet. Entire balcony watches and heckles.</div>
       <div class="game-desc" style="margin-top:8px">
-        <strong style="color:var(--grizz-green)">Round 1:</strong> Softball — big, slow, hittable. Just getting their bearings.<br>
-        <strong style="color:var(--grizz-brown)">Round 2:</strong> Tennis ball — smaller, faster. This is where it gets ugly.<br>
-        <strong style="color:var(--grizz-red)">Round 3:</strong> Ping pong ball — basically impossible. Pure comedy.
+        <strong style="color:var(--grizz-green)">Pitch 1:</strong> Softball — big target. Getting their bearings.<br>
+        <strong style="color:var(--grizz-brown)">Pitch 2:</strong> Tennis ball — this is where it gets ugly.<br>
+        <strong style="color:var(--grizz-red)">Pitch 3:</strong> Ping pong ball — basically impossible. Pure comedy.
       </div>
-      <div class="game-penalty">Hit = point for your team. Miss = that rookie drinks.</div>
+      <div class="game-penalty">Every miss = that rookie chugs in the parking lot while the balcony counts</div>
       <div class="game-stakes">★ Tied after 3? Sudden death — both spin again, first contact wins</div>
     </div>
-
     <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 5</div>
-      <div class="game-name">War Cry from The Balcony</div>
-      <div class="game-desc">Both teams go to the balcony. Each team performs their war cry from The Draft to the parking lot below. Vets judge volume, energy, creativity.</div>
-      <div class="game-penalty">Losing team: shotgun on the balcony</div>
-      <div class="game-stakes">★ The spectacle moment of the day</div>
+      <div class="game-type">Round 5</div>
+      <div class="game-name">The Balcony</div>
+      <div class="game-desc">While everyone's still outside — both teams perform their war cry to the parking lot below. Full volume. Full commitment. Vets judge effort, not creativity. Half-ass it and you'll know.</div>
+      <div class="game-penalty">Losing team: shotgun on the balcony while the other team heckles</div>
     </div>
     <div class="game-card card-red">
-      <div class="game-type">Gauntlet Round 6</div>
+      <div class="game-type">Round 6</div>
       <div class="game-name">Last Man Standing</div>
-      <div class="game-desc">Musical chairs meets drinking. Music plays, chairs get pulled. When you're out, you take a shot. Last rookie standing wins a golden advantage.</div>
-      <div class="game-penalty">Each elimination = a shot</div>
-      <div class="game-stakes">★ Winner earns 50 BONUS POINTS for scavenger hunt</div>
+      <div class="game-desc">Musical chairs with consequences. Every elimination: that rookie takes a shot. Between each round, remaining rookies hold a wall sit. Fall off the wall = eliminated. Last one standing earns something.</div>
+      <div class="game-penalty">Each elimination = shot + you're done for the day (you watch)</div>
+      <div class="game-stakes">★ Last rookie standing earns 50 bonus scavenger hunt points for their team</div>
     </div>
 
-    <div class="phase-header dark" style="margin-top:16px"><h3>Phase 4 — The Send-Off</h3><div class="phase-time">1:40 – 2:00 PM</div></div>
+    <div class="phase-header dark" style="margin-top:16px"><h3>The Send-Off</h3><div class="phase-time">1:45 – 2:00 PM &bull; Earn your seat</div></div>
     <div class="game-card">
-      <div class="game-type">Final</div>
+      <div class="game-type">Final Order</div>
       <div class="game-name">The Bus Chug</div>
-      <div class="game-desc">Full team chug race — every rookie chugs simultaneously. Winning team picks seats on the bus first.</div>
+      <div class="game-desc">Every rookie chugs simultaneously. Full team race. Winning team boards the bus first and picks seats. Losing team stands outside and waits until vets say they can board.</div>
     </div>
     <div class="game-card">
-      <div class="game-type">Ceremony</div>
-      <div class="game-name">Balcony Send-Off</div>
-      <div class="game-desc">Group photo on the balcony. Captains give a quick speech. Announce the apartment winner and the scavenger hunt bonus. Head to the bus.</div>
-      <div class="game-stakes">★ Bus leaves at 2:00 SHARP</div>
+      <div class="game-type">Send-Off</div>
+      <div class="game-name">Balcony Photo & March Out</div>
+      <div class="game-desc">Group photo on the balcony. Captains give a 30-second speech. Announce who's carrying the most penalties into the scavenger hunt. Everyone heads to the bus.</div>
+      <div class="game-stakes">★ Bus leaves at 2:00 SHARP. Not on the bus = you're walking downtown.</div>
     </div>
   </div>
 
@@ -374,34 +395,6 @@
       <button id="toggle-reggie" onclick="switchTeam('reggie')">Team Reggie</button>
     </div>
     <div id="taskList"></div>
-  </div>
-
-  <!-- BUDGET -->
-  <div id="tab-budget" class="hidden">
-    <div class="card">
-      <div class="row"><span class="label">Total Budget</span><span class="big-number">$7,000</span></div>
-      <div class="text-xs text-light mt-1">$5,400 rookie dues + $1,700 fine fund</div>
-      <div class="progress-bar"><div class="progress-fill" style="width:62.4%"></div></div>
-      <div class="grid-2">
-        <div class="stat-box"><div class="big-number text-red" style="font-size:22px">$4,370</div><div class="text-xs text-light">Committed</div></div>
-        <div class="stat-box"><div class="big-number text-green" style="font-size:22px">$2,630</div><div class="text-xs text-light">For Drinks</div></div>
-      </div>
-    </div>
-    <div class="card-sm row">
-      <div style="display:flex;align-items:center;gap:12px"><div class="expense-icon food">🍽️</div><div><div class="font-bold text-sm">Dinner (Spencer's)</div><div class="text-xs text-light">$100/person + tax & tip</div></div></div>
-      <div class="font-bold">$3,700</div>
-    </div>
-    <div class="card-sm row">
-      <div style="display:flex;align-items:center;gap:12px"><div class="expense-icon transport">🚌</div><div><div class="font-bold text-sm">Party Bus</div><div class="text-xs text-light">1-way to downtown</div></div></div>
-      <div class="font-bold">$670</div>
-    </div>
-    <div class="info-box green mt-3">
-      <div class="text-green font-bold text-sm" style="margin-bottom:6px">Drinks Budget</div>
-      <div class="text-xs">
-        <div class="row" style="margin-bottom:4px"><span class="text-muted">Vets (during hunt)</span><span class="text-muted font-bold">Own tab</span></div>
-        <div class="row"><span class="text-muted">Lake Effect</span><span class="text-green font-bold" style="font-size:14px">~$2,630</span></div>
-      </div>
-    </div>
   </div>
 
   <!-- DINNER -->
@@ -483,7 +476,7 @@ const TASKS=[
   {id:20,title:"Celly in Public",desc:"Full hockey celly (glass bang included) in public",pts:20},
 ];
 const MAX_POINTS=TASKS.reduce((s,t)=>s+t.pts,0);
-const TABS=['schedule','games','hunt','budget','dinner','teams'];
+const TABS=['schedule','games','hunt','dinner','teams'];
 let scores={bukes:{},reggie:{}},activeTeam='bukes',timerRunning=false,timeLeft=3*3600,timerInterval=null,pendingTask=null;
 
 function showTab(id){TABS.forEach(t=>document.getElementById('tab-'+t).classList.toggle('hidden',t!==id));document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',TABS[i]===id));}
