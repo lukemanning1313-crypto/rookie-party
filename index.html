@@ -194,7 +194,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Utah_Grizzlies_logo.svg" alt="Grizzlies" onerror="this.parentElement.innerHTML='🐻'">
   </div>
   <h1>ROOKIE <span>PARTY</span></h1>
-  <div class="sub">Utah Grizzlies &bull; 2025-26</div>
+  <div class="sub">Mo-Bettah's Mo-Problems &bull; 2025-26</div>
 </div>
 
 <div class="tab-bar">
@@ -262,11 +262,11 @@
     <div class="phase-header"><h3>The Opening</h3><div class="phase-time">Do these first, in order</div></div>
     <div class="game-card card-accent">
       <div class="game-name">Door Tax</div>
-      <div class="game-desc">Beer in hand the second you walk in. Chug it in the doorway before you're allowed inside. Slowest guy does it again.</div>
+      <div class="game-desc">Beer in hand the second you walk in. You chug it standing in the doorway while making eye contact with the nearest vet. Look away = start over. Slowest guy does it twice.</div>
     </div>
     <div class="game-card card-accent">
       <div class="game-name">Squad Assignment</div>
-      <div class="game-desc">Bukes and Reggie claim their rookies one by one. You don't pick your team — your team picks you.</div>
+      <div class="game-desc">Bukes and Reggie claim their rookies one by one. You don't pick your team — your team picks you. Stand there and wait to be chosen.</div>
     </div>
 
     <div class="phase-header copper" style="margin-top:16px"><h3>The Menu</h3><div class="phase-time">Vets pick what's next — any order, as many as you want</div></div>
@@ -319,16 +319,37 @@
     </div>
     <div class="game-card card-copper">
       <div class="game-name">Drink Roulette</div>
-      <div class="game-desc">Line up identical cups — most are beer, but a few are loaded (hot sauce, pickle juice, whatever vets want). Every rookie picks a cup and chugs it. No smelling, no switching. You get what you get.</div>
+      <div class="game-desc">Line up identical cups — most are beer, but a few are loaded with whatever vets find in the fridge. Hot sauce, pickle juice, condiments, mix it up. Every rookie picks a cup and sends it. No smelling, no switching.</div>
     </div>
     <div class="game-card card-copper">
       <div class="game-name">The Auction</div>
       <div class="game-desc">Vets bid on rookies using drink assignments. Highest bid = that rookie does whatever the vet says on the spot. Could be anything. Vet's call.</div>
     </div>
-    <div class="game-card card-copper" style="border-left:3px solid var(--grizz-red)">
-      <div class="game-type" style="color:var(--grizz-red)">Punishment Option</div>
+    <div class="game-card card-copper">
+      <div class="game-name">Wheelbarrow Send</div>
+      <div class="game-desc">Two rookies per team pair up. Both chug a beer first, then wheelbarrow race across the parking lot. Losing pair chugs again. Switch positions and run it back.</div>
+    </div>
+    <div class="game-card card-copper">
+      <div class="game-name">The Confession</div>
+      <div class="game-desc">Rookie unlocks his phone and hands it to a vet. Vet picks a conversation and reads the last 10 messages out loud to the room. No context, no explanation. Everyone hears it.</div>
+    </div>
+    <div class="game-card card-copper">
+      <div class="game-name">The Gauntlet Walk</div>
+      <div class="game-desc">Vets line the hallway. One rookie at a time walks through. Each vet gives a task as you pass — chug, pushup, answer a question, whatever they feel like. Stop moving = back to the start.</div>
+    </div>
+
+    <div class="phase-header red" style="margin-top:16px"><h3>Punishments</h3><div class="phase-time">Stack these onto any activity</div></div>
+    <div class="game-card card-red">
       <div class="game-name">Cold Call</div>
-      <div class="game-desc">Rookie gets handed a vet's phone. Calls the last person in their recents, stays on for 60 seconds, and explains the situation. Can't hang up first. Use this as a penalty for any activity.</div>
+      <div class="game-desc">Rookie gets handed a vet's phone. Calls the last person in their recents, stays on for 60 seconds, and explains the situation. Can't hang up first.</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-name">Phone Confession</div>
+      <div class="game-desc">Hand over your unlocked phone. Vet picks a contact and reads texts out loud. Use this when a rookie loses or hesitates.</div>
+    </div>
+    <div class="game-card card-red">
+      <div class="game-name">The Mixer</div>
+      <div class="game-desc">Vets make a drink using whatever's in the fridge. Rookie chugs the whole thing. No questions about what's in it.</div>
     </div>
 
     <div class="phase-header dark" style="margin-top:16px"><h3>The Send-Off</h3><div class="phase-time">When it's time to go</div></div>
@@ -420,23 +441,23 @@
 
 <script>
 const TASKS=[
-  {id:1,title:"Team Photo with a Stranger",desc:"Photo with someone who has no idea what's going on",pts:10},
-  {id:2,title:"Karaoke Performance",desc:"One teammate sings a full song at a karaoke bar",pts:25},
-  {id:3,title:"Free Drink from a Stranger",desc:"Convince a stranger to buy someone a drink",pts:20},
-  {id:4,title:"Dance Battle",desc:"Challenge someone to a dance-off (video proof)",pts:30},
-  {id:5,title:"Jersey Selfie",desc:"Find someone wearing any sports jersey, get a selfie",pts:10},
-  {id:6,title:"Bartender's Choice",desc:"Bartender makes a custom drink, entire team tries it",pts:15},
-  {id:7,title:"Celebrity Lookalike",desc:"Find someone who looks like a celebrity, get a photo",pts:15},
-  {id:8,title:"Team Pyramid",desc:"Build a human pyramid in public (photo proof)",pts:25},
-  {id:9,title:"Bar Trivia Win",desc:"Win a round of trivia or challenge a group",pts:20},
-  {id:10,title:"Get a Phone Number",desc:"Get a real number from a stranger (with consent)",pts:20},
-  {id:11,title:"Arm Wrestling Match",desc:"Challenge a bouncer or bartender to arm wrestle",pts:25},
-  {id:12,title:"Mystery Shot",desc:"Bartender's most hated shot — entire team takes it",pts:20},
-  {id:13,title:"Bachelorette Party Crashers",desc:"Find a bachelorette party and get a group photo",pts:25},
-  {id:14,title:"Tip the Street Performer",desc:"Find a street performer, tip them, join the act",pts:20},
-  {id:15,title:"Pushup Challenge",desc:"Entire team does 20 pushups in the middle of a bar",pts:15},
-  {id:16,title:"Convince Someone You're Famous",desc:"Get a stranger to believe one of you is a celebrity",pts:30},
-  {id:17,title:"Celly in Public",desc:"Full hockey celly (glass bang included) in public",pts:20},
+  {id:1,title:"Shotgun with a Stranger",desc:"Convince a random person to shotgun a beer with you. Video proof.",pts:25},
+  {id:2,title:"The Proposal",desc:"Get on one knee and fake propose to a stranger in public. Sell it.",pts:30},
+  {id:3,title:"Table Takeover",desc:"Sit at a stranger's table uninvited. Order a round. Last 5 minutes without getting kicked.",pts:25},
+  {id:4,title:"The Swap",desc:"Convince a stranger to trade a piece of their clothing for one of yours. Walk away wearing it.",pts:25},
+  {id:5,title:"Bartender Shot",desc:"Get a bartender to take a shot with the entire team. Photo proof.",pts:20},
+  {id:6,title:"Karaoke Full Send",desc:"One teammate sings a full song at a karaoke bar. Has to commit — no laughing through it.",pts:25},
+  {id:7,title:"Stranger's Tab",desc:"Get a stranger to buy a round for the team. No sob stories — pure charisma.",pts:30},
+  {id:8,title:"The Interview",desc:"Film a fake news interview with a stranger about a completely made-up story. Keep a straight face.",pts:20},
+  {id:9,title:"Dance Battle",desc:"Challenge someone to a dance-off in a crowded spot. Video proof. Crowd has to react.",pts:30},
+  {id:10,title:"Get on Stage",desc:"Get on any stage or platform in a bar and perform something for at least 30 seconds.",pts:25},
+  {id:11,title:"Arm Wrestling Match",desc:"Challenge a bouncer or bartender to arm wrestle. Has to happen.",pts:25},
+  {id:12,title:"Piggyback Ride",desc:"Get a stranger to carry a teammate piggyback for 20+ feet. Video proof.",pts:20},
+  {id:13,title:"Bachelorette Crashers",desc:"Find a bachelorette party. Infiltrate. Get a group photo with the whole group.",pts:25},
+  {id:14,title:"Convince Someone You're NHL",desc:"Get a stranger to genuinely believe one of you plays in the NHL. Bonus if they ask for a photo.",pts:30},
+  {id:15,title:"Bouncer Buddy",desc:"Get a bouncer to take a ridiculous photo with the team. The more absurd the better.",pts:15},
+  {id:16,title:"Celly in Public",desc:"Full hockey celly — glass bang, knee slide, the whole thing — in the most public spot possible.",pts:20},
+  {id:17,title:"Free Drink Finesse",desc:"Convince a stranger to buy someone a drink without them knowing why.",pts:20},
 ];
 const MAX_POINTS=TASKS.reduce((s,t)=>s+t.pts,0);
 const TABS=['schedule','games','hunt','dinner','teams'];
