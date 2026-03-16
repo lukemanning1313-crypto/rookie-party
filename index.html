@@ -266,7 +266,7 @@
     </div>
     <div class="game-card card-accent">
       <div class="game-name">Squad Assignment</div>
-      <div class="game-desc">Bukes and Reggie claim their rookies one by one. You don't pick your team — your team picks you. Stand there and wait to be chosen.</div>
+      <div class="game-desc">Enns and Gelatt claim their rookies one by one. You don't pick your team — your team picks you. Stand there and wait to be chosen.</div>
     </div>
 
     <div class="phase-header copper" style="margin-top:16px"><h3>The Menu</h3><div class="phase-time">Vets pick what's next — any order, as many as you want</div></div>
@@ -341,7 +341,7 @@
     <div class="phase-header red" style="margin-top:16px"><h3>Punishments</h3><div class="phase-time">Stack these onto any activity</div></div>
     <div class="game-card card-red">
       <div class="game-name">Cold Call</div>
-      <div class="game-desc">Rookie gets handed a vet's phone. Calls the last person in their recents, stays on for 60 seconds, and explains the situation. Can't hang up first.</div>
+      <div class="game-desc">Rookie opens his own contacts. Vets pick a random name. He calls them on speaker, stays on for 60 seconds, and explains the situation. Can't hang up first.</div>
     </div>
     <div class="game-card card-red">
       <div class="game-name">Phone Confession</div>
@@ -412,16 +412,16 @@
   <!-- TEAMS -->
   <div id="tab-teams" class="hidden">
     <div class="card text-center">
-      <div style="font-size:20px;font-weight:900">13 Rookies</div>
+      <div style="font-size:20px;font-weight:900">11 Rookies</div>
       <div class="text-muted text-sm mt-1">2 Teams &bull; 2 Captains</div>
     </div>
     <div style="margin-bottom:16px">
-      <div class="phase-header" style="margin-bottom:8px"><h3>Team Bukes</h3><div class="phase-time">Captain: Bukes</div></div>
-      <div class="roster-name">Friesen</div><div class="roster-name">Danny</div><div class="roster-name">Enns</div><div class="roster-name">Antonacci</div><div class="roster-name">Collela</div><div class="roster-name">Zinger</div>
+      <div class="phase-header" style="margin-bottom:8px"><h3>Team Bukes</h3><div class="phase-time">Captain: Enns</div></div>
+      <div class="roster-name">Friesen</div><div class="roster-name">Danny</div><div class="roster-name">Antonacci</div><div class="roster-name">Collela</div><div class="roster-name">Zinger</div>
     </div>
     <div>
-      <div class="phase-header copper" style="margin-bottom:8px"><h3>Team Reggie</h3><div class="phase-time">Captain: Reggie</div></div>
-      <div class="roster-name">Steiny</div><div class="roster-name">Kovie</div><div class="roster-name">John Gelatt</div><div class="roster-name">Noel</div><div class="roster-name">Lil Gratts</div><div class="roster-name">Mucitelli</div><div class="roster-name">Niemo</div>
+      <div class="phase-header copper" style="margin-bottom:8px"><h3>Team Reggie</h3><div class="phase-time">Captain: Gelatt</div></div>
+      <div class="roster-name">Steiny</div><div class="roster-name">Kovie</div><div class="roster-name">Noel</div><div class="roster-name">Lil Gratts</div><div class="roster-name">Mucitelli</div><div class="roster-name">Niemo</div>
     </div>
   </div>
 
@@ -442,22 +442,25 @@
 <script>
 const TASKS=[
   {id:1,title:"Shotgun with a Stranger",desc:"Convince a random person to shotgun a beer with you. Video proof.",pts:25},
-  {id:2,title:"The Proposal",desc:"Get on one knee and fake propose to a stranger in public. Sell it.",pts:30},
-  {id:3,title:"Table Takeover",desc:"Sit at a stranger's table uninvited. Order a round. Last 5 minutes without getting kicked.",pts:25},
-  {id:4,title:"The Swap",desc:"Convince a stranger to trade a piece of their clothing for one of yours. Walk away wearing it.",pts:25},
-  {id:5,title:"Bartender Shot",desc:"Get a bartender to take a shot with the entire team. Photo proof.",pts:20},
-  {id:6,title:"Karaoke Full Send",desc:"One teammate sings a full song at a karaoke bar. Has to commit — no laughing through it.",pts:25},
+  {id:2,title:"The Proposal",desc:"Get on one knee and fake propose to a stranger in public. Sell it. Video proof.",pts:30},
+  {id:3,title:"Pants a Stranger",desc:"Rip someone's pants down in public. Video proof. Deal with the aftermath.",pts:35},
+  {id:4,title:"Table Takeover",desc:"Sit at a stranger's table uninvited. Order a round. Last 5 minutes without getting kicked.",pts:25},
+  {id:5,title:"The Swap",desc:"Convince a stranger to trade a piece of their clothing for yours. Walk away wearing it.",pts:25},
+  {id:6,title:"Body Shot",desc:"Get a stranger to do a body shot off a teammate. Or vice versa. Video proof.",pts:30},
   {id:7,title:"Stranger's Tab",desc:"Get a stranger to buy a round for the team. No sob stories — pure charisma.",pts:30},
-  {id:8,title:"The Interview",desc:"Film a fake news interview with a stranger about a completely made-up story. Keep a straight face.",pts:20},
+  {id:8,title:"Karaoke Full Send",desc:"One teammate sings a full song at karaoke. Has to commit — no laughing through it.",pts:25},
   {id:9,title:"Dance Battle",desc:"Challenge someone to a dance-off in a crowded spot. Video proof. Crowd has to react.",pts:30},
-  {id:10,title:"Get on Stage",desc:"Get on any stage or platform in a bar and perform something for at least 30 seconds.",pts:25},
+  {id:10,title:"The Trade Up",desc:"Start with a napkin. Trade up through strangers until you have something worth $20+. Document every trade.",pts:30},
   {id:11,title:"Arm Wrestling Match",desc:"Challenge a bouncer or bartender to arm wrestle. Has to happen.",pts:25},
-  {id:12,title:"Piggyback Ride",desc:"Get a stranger to carry a teammate piggyback for 20+ feet. Video proof.",pts:20},
-  {id:13,title:"Bachelorette Crashers",desc:"Find a bachelorette party. Infiltrate. Get a group photo with the whole group.",pts:25},
-  {id:14,title:"Convince Someone You're NHL",desc:"Get a stranger to genuinely believe one of you plays in the NHL. Bonus if they ask for a photo.",pts:30},
-  {id:15,title:"Bouncer Buddy",desc:"Get a bouncer to take a ridiculous photo with the team. The more absurd the better.",pts:15},
-  {id:16,title:"Celly in Public",desc:"Full hockey celly — glass bang, knee slide, the whole thing — in the most public spot possible.",pts:20},
-  {id:17,title:"Free Drink Finesse",desc:"Convince a stranger to buy someone a drink without them knowing why.",pts:20},
+  {id:12,title:"Bachelorette Crashers",desc:"Find a bachelorette party. Infiltrate. Get a group photo with the whole group.",pts:25},
+  {id:13,title:"Convince Someone You're NHL",desc:"Get a stranger to genuinely believe one of you plays in the NHL. Bonus if they ask for a photo.",pts:30},
+  {id:14,title:"Pants Off Challenge",desc:"A teammate has to walk into a bar with no pants on and order a drink. Has to stay for 2 minutes.",pts:35},
+  {id:15,title:"The Wingman",desc:"Approach the most intimidating group in the bar and try to set up a teammate. Has to be a real attempt.",pts:25},
+  {id:16,title:"Get Behind the Bar",desc:"Get behind an actual bar and pour a drink. Photo proof or it didn't happen.",pts:35},
+  {id:17,title:"Celly in Public",desc:"Full hockey celly — glass bang, knee slide, the whole thing — in the most public spot possible.",pts:20},
+  {id:18,title:"Bouncer Buddy",desc:"Get a bouncer to take the most ridiculous photo possible with the team.",pts:15},
+  {id:19,title:"Bartender Shot",desc:"Get a bartender to take a shot with the entire team. Photo proof.",pts:20},
+  {id:20,title:"The Dare",desc:"Approach a stranger, ask them to dare you to do something, then actually do it. Video proof.",pts:25},
 ];
 const MAX_POINTS=TASKS.reduce((s,t)=>s+t.pts,0);
 const TABS=['schedule','games','hunt','dinner','teams'];
